@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="WedPage" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             mc:Ignorable="d"
+             x:Class="EVmain.WeddingPage" BackgroundImageSource="mg1" Title="Marriage Event">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Order" Clicked="ToolbarItem_Clicked"  ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+   
+    <StackLayout>
+
+        
+        <StackLayout x:Name="s1">
+            <ScrollView>
+                <StackLayout>
+
+                    <StackLayout x:Name="WeddingInfo" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Margin="0,95,0,20" HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Event Information</Label>
+
+                        <StackLayout Orientation="Horizontal" Margin="30,0,30,20">
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label FontSize="20" TextColor="WhiteSmoke" Text="Select Event Date: "></Label>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <DatePicker x:Name="d1" FontSize="Medium" TextColor="#b68948"></DatePicker>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Entry x:Name="d2"  Keyboard="Numeric" Margin="25,0,30,20" FontSize="20" PlaceholderColor="#b68948" TextColor="#b68948" Placeholder="Enter Number of Expected Guests"></Entry>
+
+                        <StackLayout Orientation="Horizontal" Margin="30,0,30,20" >
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label FontSize="20" Margin="0,0,10,0" TextColor="WhiteSmoke" Text="Select Event Timing: "></Label>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Picker TextColor="#b68948" TitleColor="#b68948" Title="Day/Night" x:Name="pik" SelectedIndexChanged="pik_SelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>Day</x:String>
+                                    <x:String>Night</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            </StackLayout>
+                        </StackLayout>
+
+
+                        <StackLayout x:Name="anim">
+                            <forms:AnimationView 
+	                    x:Name="animV"  	                     
+	                    AutoPlay="true"
+	                    HeightRequest="150"
+                         WidthRequest="150"
+                        OnPlayAnimation="animV_OnPlay"
+                        OnFinishedAnimation="animV_OnFinish"/>
+
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+
+
+
+                    <StackLayout x:Name="HallBooking" IsVisible="False" VerticalOptions="Center" HorizontalOptions="Center">
+
+                    </StackLayout>
+
+
+
+
+                    <StackLayout x:Name="Foodstack" IsVisible="False"  VerticalOptions="Center" HorizontalOptions="Center">
+
+                    </StackLayout>
+
+
+                    <StackLayout x:Name="Photostack" IsVisible="False"  VerticalOptions="Center" HorizontalOptions="Center">
+
+                    </StackLayout>
+
+                    <StackLayout x:Name="Decorstack" IsVisible="False"  VerticalOptions="Center" HorizontalOptions="Center">
+
+                       
+           
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+        
+        <StackLayout x:Name="s2" IsVisible="False">
+            <ScrollView>
+                <StackLayout>
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Image HeightRequest="30" WidthRequest="30" Margin="0,0,20,0" Source="details"></Image>
+                                <Label Text="Details" FontSize="Medium" TextColor="#3b2c49" WidthRequest="150"></Label>
+                            </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                                <Label TextColor="#3b2c49" FontSize="Medium" Text="Event Type: "></Label>
+                                <Label x:Name="olb1" TextColor="#3b2c49" FontSize="Medium" Text=""></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                                <Label TextColor="#3b2c49" FontSize="Medium" Text="Date: "></Label>
+                                <Label TextColor="#3b2c49" FontSize="Medium" x:Name="olb2" Text=""></Label>
+                        </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="#3b2c49" FontSize="Medium" Text="Timing: "></Label>
+                                <Label TextColor="#3b2c49" FontSize="Medium" x:Name="olb3" Text=""></Label>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="#3b2c49" FontSize="Medium" Text="Guests: "></Label>
+                                <Label TextColor="#3b2c49" FontSize="Medium" x:Name="olb4" Text=""></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Image HeightRequest="30" WidthRequest="30" Margin="0,0,20,0" Source="hallp"></Image>
+                                <Label Text="Hall" FontSize="Medium" TextColor="#3b2c49" WidthRequest="150"></Label>
+                            </StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Label Text="" x:Name="olb5" Margin="0, 0, 20, 0" FontSize="Medium" TextColor="#3b2c49"></Label>
+                                <Label Text="" x:Name="olb6" FontSize="Medium"  TextColor="#3b2c49" Margin="0,0,60,0" HorizontalOptions="EndAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame>
+                        <StackLayout x:Name="oFoodStack">
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Image HeightRequest="30" WidthRequest="30" Margin="0,0,20,0" Source="foodp"></Image>
+                                <Label Text="FoodItems" FontSize="Medium" TextColor="#3b2c49" WidthRequest="150"></Label>
+                            </StackLayout>
+                            
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Image HeightRequest="30" WidthRequest="30" Margin="0,0,20,0" Source="photographp"></Image>
+                                <Label Text="Photographer" FontSize="Medium" TextColor="#3b2c49" WidthRequest="150"></Label>
+                            </StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Label Text="" x:Name="olb7"  Margin="0, 0, 20, 0" FontSize="Medium" TextColor="#3b2c49"></Label>
+                                <Label Text="" x:Name="olb8" FontSize="Medium" TextColor="#3b2c49" Margin="0,0,60,0" HorizontalOptions="EndAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Image HeightRequest="30" WidthRequest="30" Margin="0,0,20,0" Source="decorp"></Image>
+                                <Label Text="Decorator" FontSize="Medium" TextColor="#3b2c49" WidthRequest="150"></Label>
+                            </StackLayout>
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                <Label Text="" x:Name="olb9" FontSize="Medium" TextColor="#3b2c49"  Margin="0, 0, 20, 0" WidthRequest="150"></Label>
+                                <Label Text="" x:Name="olb11" FontSize="Medium" TextColor="#3b2c49" Margin="0,0,60,0" HorizontalOptions="EndAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    
+
+
+
+                </StackLayout>
+       
+            </ScrollView>
+
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout Margin="0,20,0,15" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label TextColor="#b68948" FontSize="Large" Text="Total Bill: "></Label>
+                    <Label TextColor="#b68948" FontSize="Large" x:Name="olb10" Text="5000"></Label>
+                </StackLayout>
+            </StackLayout>
+            
+            
+            <StackLayout VerticalOptions="EndAndExpand" HeightRequest="50">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Confirm" WidthRequest="200" HorizontalOptions="CenterAndExpand" TextColor="#1b1b1b" BackgroundColor="#b68948" Clicked="oButton_Clicked"></Button>
+                    <Button Text="Cancel" WidthRequest="200" HorizontalOptions="CenterAndExpand" TextColor="#1b1b1b" BackgroundColor="#b68948" Clicked="oButton_Clicked_1"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        
+        <StackLayout x:Name="BottomBar" HeightRequest="60" VerticalOptions="EndAndExpand" BackgroundColor="#3b2c49">
+            <StackLayout  VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                    <Image  Source="info.png" WidthRequest="20" HeightRequest="20">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label x:Name="bl1" TextColor="White" Text="Date"></Label>
+
+                </StackLayout>
+
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image  Source="hall.png" WidthRequest="25" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label x:Name="bl2" TextColor="White" Text="Halls"></Label>
+                </StackLayout>
+
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image Source="food.png" WidthRequest="25" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label x:Name="bl3" TextColor="White" Text="Food"></Label>
+                </StackLayout>
+
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image Source="photograph.png" WidthRequest="25" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label x:Name="bl4" TextColor="White" Text="Photographer"></Label>
+                </StackLayout>
+
+
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image Source="decoration.png" WidthRequest="25" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label x:Name="bl5"  TextColor="White" Text="Decoration"></Label>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+
+</ContentPage>

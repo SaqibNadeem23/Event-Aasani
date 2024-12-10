@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             x:Class="EVmain.Photographer" BackgroundImageSource="abg">
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ret"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,30,0" FontSize="Small" TextColor="WhiteSmoke">back</Label>
+            </StackLayout>
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Select Photographer</Label>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Photographer 1" Margin="70,0,120,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+               <CheckBox x:Name="sw9" IsVisible="False" CheckedChanged="sw9_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="p1.jpg" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_13"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s9">
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <Button x:Name="btn9" Clicked="btn9_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="80,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Photographer 2" Margin="70,0,120,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw10" IsVisible="False" CheckedChanged="sw10_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="CenterAndExpand"
+           Padding="0"
+           IsClippedToBounds="True">
+
+                    <Image  Source="p2.jpg" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_14"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s10">
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="5" ></lv:RatingConception>
+                    <Label Text="5.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <Button x:Name="btn10" Clicked="btn10_Clicked" Text="Select" BackgroundColor="BlueViolet" TextColor="WhiteSmoke" VerticalOptions="Center" Margin="80,0"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Photographer 3" Margin="70,0,120,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw11" IsVisible="False" CheckedChanged="sw11_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="CenterAndExpand"
+           Padding="0"
+           IsClippedToBounds="True">
+
+                    <Image  Source="p3.jpg" Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_15"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s11">
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+
+                <Button x:Name="btn11" Clicked="btn11_Clicked" Text="Select" VerticalOptions="Center" Margin="80,0,80,20" BackgroundColor="BlueViolet" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

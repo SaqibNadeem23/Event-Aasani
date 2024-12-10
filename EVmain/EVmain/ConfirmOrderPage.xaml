@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.ConfirmOrderPage">
+    
+    
+    <ScrollView Orientation="Both">
+        
+            <StackLayout>
+                <Label Text="Total Bill" TextColor="Black" FontSize="Large" HorizontalOptions="Center"></Label>
+            <Frame>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Event Type: "></Label>
+                        <Label x:Name="olb1" Text="asd"></Label>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Date: "></Label>
+                        <Label x:Name="olb2" Text="asd"></Label>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Timing: "></Label>
+                        <Label x:Name="olb3" Text="asd"></Label>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Guests: "></Label>
+                        <Label x:Name="olb4" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Hall: "></Label>
+                        <Label x:Name="olb5" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Hall Rate: "></Label>
+                        <Label x:Name="olb6" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout x:Name="oFoodStack">
+                        
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Photographer: "></Label>
+                        <Label x:Name="olb7" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Photographer Rate: "></Label>
+                        <Label x:Name="olb8" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Theme Set1 : "></Label>
+                        <Label x:Name="olb9" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total Bill: "></Label>
+                        <Label x:Name="olb10" Text="asd"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Confirm" Clicked="oButton_Clicked"></Button>
+                        <Button Text="Cancel" Clicked="oButton_Clicked_1"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

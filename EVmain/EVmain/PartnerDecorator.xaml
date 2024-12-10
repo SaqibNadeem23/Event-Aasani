@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.PartnerDecorator" x:Name="cp">
+    <StackLayout>
+        <Frame>
+            <StackLayout Margin="30,30">
+                <Label FontSize="Medium" Text="Decorator Name"></Label>
+                <Entry  x:Name="e1"></Entry>
+                <Label FontSize="Medium" Text="Decorator Rate"></Label>
+                <Entry Keyboard="Numeric" x:Name="e3"></Entry>
+
+                <Button Text="Select Display Picture" TextColor="#1b1b1b" BackgroundColor="#b68948" Margin="20,0" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"></Button>
+                <Frame CornerRadius="100" HeightRequest="200" WidthRequest="200" Padding="0" IsClippedToBounds="True" HorizontalOptions="Center">
+                    <Image x:Name="img" Aspect="Fill">
+                    </Image>
+                </Frame>
+                <Button x:Name="btn" Text="Update" BackgroundColor="#1b1b1b" TextColor="WhiteSmoke" WidthRequest="40" HeightRequest="50" Clicked="btn_Clicked"></Button>
+
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

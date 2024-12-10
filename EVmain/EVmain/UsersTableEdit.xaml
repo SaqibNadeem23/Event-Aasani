@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.UsersTableEdit">
+    
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete User" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+            <StackLayout VerticalOptions="Center">
+                <Label Text="Select User Id" FontSize="Large" TextColor="#1b1b1b"></Label>
+            </StackLayout>
+            <StackLayout WidthRequest="50" VerticalOptions="Center">
+            <Picker x:Name="pik" SelectedIndexChanged="pik_SelectedIndexChanged"></Picker>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Frame>
+                <StackLayout Margin="30,30">
+                    <Label FontSize="Medium" Text="Full Name"></Label>
+                    <Entry  x:Name="e1"></Entry>
+                    <Label FontSize="Medium" Text="Email"></Label>
+                    <Entry x:Name="e2"></Entry>
+                    <Label FontSize="Medium" Text="Phone Number"></Label>
+                    <Entry x:Name="e3" Keyboard="Numeric"></Entry>
+                    <Label FontSize="Medium" Text="Password"></Label>
+                    <Entry x:Name="e4"></Entry>
+                    <Label FontSize="Medium" Text="User Type"></Label>
+                    <Entry x:Name="e5"></Entry>
+                    <Button x:Name="btn" Text="Update" BackgroundColor="#b68948" TextColor="#1b1b1b" WidthRequest="40" HeightRequest="40" Clicked="btn_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

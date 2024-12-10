@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             mc:Ignorable="d"
+             x:Class="EVmain.CateringService" BackgroundImageSource="abg">
+
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="whitesmoke">back</Label>
+            </StackLayout>
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="whitesmoke">Select Catering Service</Label>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Imran Tent" Margin="20,0,200,0" FontSize="Title"  TextColor="whitesmoke"></Label>
+                <CheckBox x:Name="sw1" IsVisible="False" CheckedChanged="sw1_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="itent.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s1" >
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label Margin="50,0,0,5" TextColor="WhiteSmoke" Text="Tenting Service"></Label>
+                    <CheckBox CheckedChanged="c1_CheckedChanged" Color="WhiteSmoke" x:Name="c11" Margin="0,0,20,0"></CheckBox>
+                    <Label Text="Crockery Service" TextColor="WhiteSmoke"></Label>
+                    <CheckBox CheckedChanged="c1_CheckedChanged" Color="WhiteSmoke" x:Name="c12"></CheckBox>
+                </StackLayout>
+                <Button x:Name="btn1" Clicked="Btn1_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="whitesmoke"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Madina Tent" Margin="20,0,200,0" FontSize="Title" TextColor="whitesmoke"></Label>
+                <CheckBox x:Name="sw2" IsVisible="False" CheckedChanged="sw2_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="mtent.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s2">
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="5" ></lv:RatingConception>
+                    <Label Text="5.0" TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label Margin="50,0,0,5" TextColor="WhiteSmoke" Text="Tenting Service"></Label>
+                    <CheckBox x:Name="c21" Color="WhiteSmoke" CheckedChanged="c2_CheckedChanged" Margin="0,0,20,0"></CheckBox>
+                    <Label Text="Crockery Service" TextColor="WhiteSmoke"></Label>
+                    <CheckBox x:Name="c22" Color="WhiteSmoke" CheckedChanged="c2_CheckedChanged"></CheckBox>
+                </StackLayout>
+                <Button x:Name="btn2" Clicked="Btn2_Clicked" Text="Select" BackgroundColor="BlueViolet" TextColor="whitesmoke" VerticalOptions="Center" Margin="40,0"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Dubai Tent" Margin="20,0,200,0" FontSize="Title" TextColor="whitesmoke"></Label>
+                <CheckBox x:Name="sw3" IsVisible="False" CheckedChanged="sw3_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="dubaitent.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s3">
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="whitesmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Margin="50,0,0,5" TextColor="WhiteSmoke" Text="Tenting Service"></Label>
+                    <CheckBox x:Name="c31" Color="WhiteSmoke" CheckedChanged="c3_CheckedChanged" Margin="0,0,20,0"></CheckBox>
+                    <Label Text="Crockery Service" TextColor="WhiteSmoke"></Label>
+                    <CheckBox x:Name="c32" Color="WhiteSmoke" CheckedChanged="c3_CheckedChanged"></CheckBox>
+                </StackLayout>
+                <Button x:Name="btn3" Clicked="Btn3_Clicked" Text="Select" VerticalOptions="Center" Margin="40,0,40,20" BackgroundColor="BlueViolet" TextColor="whitesmoke"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="cp" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="EVmain.WeddingInfo" BackgroundImageSource="abg">
+    <ScrollView>
+        <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="WhiteSmoke">back</Label>
+        </StackLayout>
+        <Label Margin="0,0,0,50" HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Event Information</Label>
+
+        <StackLayout Orientation="Horizontal" Margin="30,0">
+                <Label FontSize="20" Margin="0,0,20,0" TextColor="WhiteSmoke" Text="Select Event Date: "></Label>
+                <DatePicker x:Name="d1" TextColor="WhiteSmoke"></DatePicker>
+            </StackLayout>
+            <Label x:Name="lbd1" Text="None" TextColor= "Red" Margin="0" Padding="0"  FontSize="Micro"></Label>
+
+            <Entry x:Name="d2" Keyboard="Numeric" Margin="30,0" FontSize="20" PlaceholderColor="WhiteSmoke" TextColor="WhiteSmoke" Placeholder="Enter Number of Expected Guests"></Entry>
+            <Label x:Name="lbd2" Text="None" TextColor= "Red" Margin="0" Padding="0"  FontSize="Micro"></Label>
+
+            <StackLayout Orientation="Horizontal" Margin="30,0" >
+            <Label FontSize="20" Margin="0,0,20,0" TextColor="WhiteSmoke" Text="Select Event Timing: "></Label>
+            <Label FontSize="20" TextColor="DeepSkyBlue"  Text="Day"></Label>
+            <Switch x:Name="d3" Toggled="sw_Toggled" ThumbColor="White" OnColor="Gold"></Switch>
+            <Label FontSize="20" TextColor="Purple" Text="Night"></Label>
+            </StackLayout>
+            
+        <StackLayout x:Name="anim">
+            <forms:AnimationView 
+	x:Name="animV"  
+	AutoPlay="true"
+	HeightRequest="200"        
+            WidthRequest="200"
+           OnPlayAnimation="animV_OnPlay"
+            OnFinishedAnimation="animV_OnFinish"
+           />
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

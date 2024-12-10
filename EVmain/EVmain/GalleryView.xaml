@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.GalleryView" BackgroundImageSource="bbg"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView">
+
+        <StackLayout>
+            <Label Text="Gallery" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="WhiteSmoke" ></Label>
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            <CarouselView  x:Name="MainCarouselView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="20,0">
+                            <Frame CornerRadius="50" 
+           HeightRequest="300"
+           WidthRequest="600"
+           HorizontalOptions="CenterAndExpand"
+           Padding="0"
+           IsClippedToBounds="True"
+VerticalOptions="CenterAndExpand">
+                                <Image Source="{Binding}" Aspect="Fill"/>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Label Text="Swipe to view other Pictures" Margin="0,5,0,0" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="WhiteSmoke" ></Label>
+
+
+
+        </StackLayout>
+        </StackLayout>
+
+</ContentPage>

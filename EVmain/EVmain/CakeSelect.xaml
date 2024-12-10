@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.CakeSelect" BackgroundImageSource="cbg.jpg">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="Black">back</Label>
+            </StackLayout>
+            <Label Margin="0,30,0,50" TextColor="Black" HorizontalOptions="Center" FontSize="40">Select Cake</Label>
+            <StackLayout HeightRequest="280"
+           WidthRequest="280"   VerticalOptions="Center" HorizontalOptions="Center">
+
+                <CarouselView  x:Name="MainCarouselView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="20" 
+           HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+           Padding="0">
+                         <Image   Source="{Binding .}" Aspect="Fill" >
+                                </Image>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="btn1" Clicked="btn1_Clicked" Text="Select" BackgroundColor="HotPink" VerticalOptions="Center" Margin="90,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

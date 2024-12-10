@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"  
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="EVmain.BdInfo" BackgroundImageSource="bbg">
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="purple">back</Label>
+            </StackLayout>
+            <Label Margin="0,0,0,50" TextColor="purple" HorizontalOptions="Center" FontSize="30">Birthday Information</Label>
+
+            <StackLayout Orientation="Horizontal" Margin="30,0,30,40">
+                <Label FontSize="20" Margin="0,0,20,0" TextColor="purple" Text="Select Birthday Date: "></Label>
+                <DatePicker TextColor="purple"></DatePicker>
+            </StackLayout>
+            <Entry Margin="30,0,30,40" FontSize="20" PlaceholderColor="purple" TextColor="purple" Placeholder="Enter Number of Expected Guests"></Entry>
+            <StackLayout Orientation="Horizontal" Margin="30,0,30,40" >
+                <Label FontSize="20" Margin="0,0,20,0" TextColor="purple" Text="Select Event Timing: "></Label>
+                <TimePicker TextColor="purple"></TimePicker>
+            </StackLayout>
+            <Entry Margin="30,0,30,40" FontSize="20" PlaceholderColor="purple" TextColor="purple" Placeholder="Enter Location"></Entry>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

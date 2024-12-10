@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             mc:Ignorable="d"
+             x:Class="EVmain.HallBooking" BackgroundImageSource="abg">
+
+    <ScrollView>
+        <StackLayout>
+            
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Select Hall</Label>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Milan Hall" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw1" IsVisible="False" CheckedChanged="sw1_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="b1.jpg"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s1" >
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Margin="20,0,0,5" Source="world.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label TextColor="WhiteSmoke" FontSize="Medium">Address: Milan Marriage Garden, Sariab Rd, Gulistan St,Quetta</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="pin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" TextDecorations="Underline" Text="Tap to view Location" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="label_Tapped_1"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="time.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" >Open 24 Hours</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+
+                <Button x:Name="btn1" Clicked="Btn1_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+        <Label Text="Milak Hall" Margin="20,0,200,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw2" IsVisible="False" CheckedChanged="sw2_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="b2.jpg"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s2">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Margin="20,0,0,5" Source="world.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label TextColor="WhiteSmoke" FontSize="Medium">Address: Milak Banquet Hall, Shara Gulistan Road,Quetta</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="pin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" TextDecorations="Underline" Text="Tap to view Location" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="label_Tapped_2"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="time.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" >Open 24 Hours</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="5" ></lv:RatingConception>
+                    <Label Text="5.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+                <Button x:Name="btn2" Clicked="Btn2_Clicked" Text="Select" BackgroundColor="BlueViolet" TextColor="WhiteSmoke" VerticalOptions="Center" Margin="40,0"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Imran Hall" Margin="20,0,200,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw3" IsVisible="False" CheckedChanged="sw3_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="b3.jpg"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s3">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Image Margin="20,0,0,5" Source="world.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label TextColor="WhiteSmoke" FontSize="Medium">Address: Imran Marriage Hall, Khudiadad Road, Quetta</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="pin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" TextDecorations="Underline" >Tap to view Location</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="time.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="WhiteSmoke" FontSize="Medium" TextDecorations="Underline" Text="Tap to view Location" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="label_Tapped_3"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="star.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label Text=" Rating: " TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                    <lv:RatingConception DrawType="Heart" IsReadOnly="True" ImageHeight="40" ImageWidth="40" ColorUI="BlueViolet" ItemsNumber="5" InitialValue="4" ></lv:RatingConception>
+                    <Label Text="4.0" TextColor="WhiteSmoke" FontSize="Medium" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Margin="20,0,0,5" Source="coin.png" HeightRequest="50" WidthRequest="50"></Image>
+                    <Label VerticalOptions="Center" TextColor="#797c01" FontSize="Title" FontAttributes="Bold">25,000</Label>
+                </StackLayout>
+
+                <Button x:Name="btn3" Clicked="Btn3_Clicked" Text="Select" VerticalOptions="Center" Margin="40,0,40,20" BackgroundColor="BlueViolet" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

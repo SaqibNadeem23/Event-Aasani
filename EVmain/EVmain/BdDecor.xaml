@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.BdDecor" BackgroundImageSource="bbg">
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ret"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,50,0" FontSize="Small" TextColor="WhiteSmoke">back</Label>
+            </StackLayout>
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Birthday Theme</Label>
+
+            <Label FontSize="Medium" Margin="20,0,0,0" TextColor="WhiteSmoke" Text="Select a Theme for Birthday"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Theme 1" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw1" IsVisible="False" CheckedChanged="sw1_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="BdDec1.jpg"
+           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s1" >
+                <Button x:Name="btn1" Clicked="Btn1_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Theme 2" Margin="20,0,200,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw2" IsVisible="False" CheckedChanged="sw2_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="bddec2.jpg"
+           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s2">
+                <Button x:Name="btn2" Clicked="Btn2_Clicked" Text="Select" BackgroundColor="BlueViolet" TextColor="WhiteSmoke" VerticalOptions="Center" Margin="40,0"></Button>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Theme 3" Margin="20,0,200,0" FontSize="Title" TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw3" IsVisible="False" CheckedChanged="sw3_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="bddec3.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s3">
+                <Button x:Name="btn3" Clicked="Btn3_Clicked" Text="Select" VerticalOptions="Center" Margin="40,0,40,20" BackgroundColor="BlueViolet" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+       
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Theme 4" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+            <CheckBox x:Name="sw4" IsVisible="False" CheckedChanged="sw4_CheckedChanged" IsEnabled="False"></CheckBox>
+        </StackLayout>
+        <StackLayout Padding="20,0">
+            <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                <Image  Source="BdDec4.jpg"
+           Aspect="AspectFill">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+        </StackLayout>
+        <StackLayout x:Name="s4" >
+            <Button x:Name="btn4" Clicked="btn4_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Theme 5" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw5" IsVisible="False" CheckedChanged="sw5_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="BdDec5.jpg"
+           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s5" >
+                <Button x:Name="btn5" Clicked="btn5_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Theme 6" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw6" IsVisible="False" CheckedChanged="sw6_CheckedChanged" IsEnabled="False"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="BdDec6.jpg"
+           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s6" >
+                <Button x:Name="btn6" Clicked="btn6_Clicked" Text="Select" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

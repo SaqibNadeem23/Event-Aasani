@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.PartnerGallery">
+
+    <ScrollView>
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Frame>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="Select Picture" FontSize="Large"></Label>
+            </StackLayout>
+            <StackLayout>
+        <Picker x:Name="Pik" WidthRequest="70" SelectedIndexChanged="Pik_SelectedIndexChanged"></Picker>
+            </StackLayout>
+        </StackLayout>
+        </Frame>
+        <Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Button Text="Add Picture" BackgroundColor="#b68948" TextColor="#1b1b1b" Clicked="Button_Clicked"></Button>
+                <Button Text="Delete Picture" BackgroundColor="#b68948" TextColor="#1b1b1b" Clicked="Button_Clicked_1"></Button>
+            </StackLayout>
+        </Frame>
+
+
+        <StackLayout>
+            <Frame  HeightRequest="350">
+            <Image x:Name="image" Aspect="Fill"  WidthRequest="400">
+                
+            </Image>
+            </Frame>
+        </StackLayout>
+
+            <Button Text="View Gallery" Clicked="Button_Clicked_2"></Button>
+    </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

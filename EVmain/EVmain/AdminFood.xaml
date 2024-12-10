@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.AdminFood">
+
+    <ScrollView>
+    <StackLayout>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Edit Food Item"></Label>
+            <Switch x:Name="sw" Toggled="sw_Toggled"></Switch>
+            <Label Text="Add Item"></Label>
+        </StackLayout>
+            
+        <StackLayout x:Name="Edit">
+        <Frame>
+            <StackLayout Margin="30,30">
+                <Picker SelectedIndexChanged="pik_SelectedIndexChanged" x:Name="pik" Title="Select Item"></Picker>
+                <Label FontSize="Medium" Text="FoodName"></Label>
+                    <Entry  x:Name="e1"></Entry>
+                    <Label FontSize="Medium" Text="FoodPrice"></Label>
+                <Entry x:Name="e3"  Keyboard="Numeric"></Entry>
+                    <Button Text="Select Display Picture" TextColor="#1b1b1b" BackgroundColor="#b68948" Margin="20,0" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"></Button>
+                    <Frame CornerRadius="100" HeightRequest="200" WidthRequest="200" Padding="0" IsClippedToBounds="True" HorizontalOptions="Center">
+                        <Image x:Name="img1" Aspect="Fill">
+                        </Image>
+                    </Frame>
+                    <Button x:Name="btn" Text="Update" BackgroundColor="#1b1b1b" TextColor="WhiteSmoke" WidthRequest="40" HeightRequest="50" Clicked="btn_Clicked"></Button>
+                </StackLayout>
+        </Frame>
+            </StackLayout>
+        <StackLayout x:Name="Add">
+            <Frame>
+                <StackLayout Margin="30,30">
+                    <Label FontSize="Medium" Text="FoodName"></Label>
+                    <Entry  x:Name="f1"></Entry>
+                    <Label FontSize="Medium" Text="FoodPrice"></Label>
+                    <Entry x:Name="f3"  Keyboard="Numeric"></Entry>
+
+                    <Button Text="Select Display Picture" TextColor="#1b1b1b" BackgroundColor="#b68948" Margin="20,0" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked1"></Button>
+                    <Frame CornerRadius="100" HeightRequest="200" WidthRequest="200" Padding="0" IsClippedToBounds="True" HorizontalOptions="Center">
+                        <Image x:Name="img2" Aspect="Fill">
+                        </Image>
+                    </Frame>
+                    <Button x:Name="btn1" Text="Add Item" BackgroundColor="#1b1b1b" TextColor="WhiteSmoke" WidthRequest="40" HeightRequest="50" Clicked="btn1_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

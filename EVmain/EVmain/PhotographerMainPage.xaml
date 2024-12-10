@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.PhotographerMainPage">
+
+    <StackLayout>
+        <StackLayout HeightRequest="200" BackgroundColor="#1b1b1b">
+            <Frame CornerRadius="100" 
+           HeightRequest="70"
+           WidthRequest="70"
+           HorizontalOptions="Center"
+            Margin="0,30"
+           Padding="0"
+           IsClippedToBounds="True">
+                <Label x:Name="lb1" Text="" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Frame>
+            <Label x:Name="lb2" Text=""  TextColor="#b68948" Margin="20,0,0,20" FontSize="Title" VerticalOptions="EndAndExpand"></Label>
+        </StackLayout>
+
+        <StackLayout Margin="20,20">
+
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Button_Clicked"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="pencil"></Image>
+                    <Label Text="Edit Photographer Details"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="gallery"></Image>
+                    <Label Text="Manage Gallery"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="browser"></Image>
+                    <Label Text="My Orders"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="user"></Image>
+                    <Label Text="My Profile"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Margin="10" Orientation="Horizontal">
+                    <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="logout"></Image>
+                    <Label Text="Logout"></Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+
+
+</ContentPage>

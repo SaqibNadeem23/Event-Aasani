@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           
+             x:Class="EVmain.FoodItems" BackgroundImageSource="abg">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+               
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="WhiteSmoke">back</Label>
+            </StackLayout>
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="WhiteSmoke">Food Items</Label>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Biryani" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw4" IsVisible="False" CheckedChanged="sw4_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+
+                    <Image  Source="biryani.jpg" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_8"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s4" >
+                <StackLayout Orientation="Horizontal">
+                    <Picker Title="Select Quantity" TextColor="WhiteSmoke" HorizontalOptions="StartAndExpand" TitleColor="WhiteSmoke">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>3 Kg</x:String>
+                                <x:String>5 Kg</x:String>
+                                <x:String>8 Kg</x:String>
+                                <x:String>10 Kg</x:String>
+                                <x:String>20 Kg</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <Button x:Name="btn4" Clicked="btn4_Clicked" Text="Add" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Kabab" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw5" IsVisible="False" CheckedChanged="sw5_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="kabab.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_9"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s5" >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Select Quantity" FontSize="Large"  TextColor="WhiteSmoke"></Label>
+                    <Picker Title="Quantity" TextColor="WhiteSmoke" HorizontalOptions="StartAndExpand" TitleColor="WhiteSmoke">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>3 Kg</x:String>
+                                <x:String>5 Kg</x:String>
+                                <x:String>8 Kg</x:String>
+                                <x:String>10 Kg</x:String>
+                                <x:String>20 Kg</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <Button x:Name="btn5" Clicked="btn5_Clicked" Text="Add" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Korma" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw6" IsVisible="False" CheckedChanged="sw6_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="korma.jpg"
+           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_10"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s6" >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Select Quantity" FontSize="Large"  TextColor="WhiteSmoke"></Label>
+                    <Picker Title="Quantity" TextColor="WhiteSmoke" HorizontalOptions="StartAndExpand" TitleColor="WhiteSmoke">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>3 Kg</x:String>
+                                <x:String>5 Kg</x:String>
+                                <x:String>8 Kg</x:String>
+                                <x:String>10 Kg</x:String>
+                                <x:String>20 Kg</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <Button x:Name="btn6" Clicked="btn6_Clicked" Text="Add" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Palak Gosht" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw7" IsVisible="False" CheckedChanged="sw7_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="pg.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_11"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s7" >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Select Quantity" FontSize="Large"  TextColor="WhiteSmoke"></Label>
+                    <Picker Title="Quantity" TextColor="WhiteSmoke" HorizontalOptions="StartAndExpand" TitleColor="WhiteSmoke">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>3 Kg</x:String>
+                                <x:String>5 Kg</x:String>
+                                <x:String>8 Kg</x:String>
+                                <x:String>10 Kg</x:String>
+                                <x:String>20 Kg</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <Button x:Name="btn7" Clicked="btn7_Clicked" Text="Add" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+
+
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Roast" Margin="20,0,200,0" FontSize="Title"  TextColor="WhiteSmoke"></Label>
+                <CheckBox x:Name="sw8" IsVisible="False" CheckedChanged="sw8_CheckedChanged"></CheckBox>
+            </StackLayout>
+            <StackLayout Padding="20,0">
+                <Frame CornerRadius="20" 
+          HeightRequest="200"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                    <Image  Source="roast.jpg"
+           Aspect="AspectFill" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_12"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="s8" >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Select Quantity" FontSize="Large"  TextColor="WhiteSmoke"></Label>
+                    <Picker Title="Quantity" TextColor="WhiteSmoke" HorizontalOptions="StartAndExpand" TitleColor="WhiteSmoke">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>3 Kg</x:String>
+                                <x:String>5 Kg</x:String>
+                                <x:String>8 Kg</x:String>
+                                <x:String>10 Kg</x:String>
+                                <x:String>20 Kg</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <Button x:Name="btn8" Clicked="btn8_Clicked" Text="Add" BackgroundColor="BlueViolet" VerticalOptions="Center" Margin="40,0" TextColor="WhiteSmoke"></Button>
+            </StackLayout>
+
+        
+
+
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+  
+</ContentPage>

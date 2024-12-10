@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.MasterPage" x:Name="pmp" xmlns:local="clr-namespace:EVmain">
+
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="TapGestureRecognizer_Tapped_2"></ToolbarItem>
+    </MasterDetailPage.ToolbarItems>
+
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <StackLayout HeightRequest="200" BackgroundColor="#1b1b1b">
+                    <Frame CornerRadius="100" 
+           HeightRequest="70"
+           WidthRequest="70"
+           HorizontalOptions="Center"
+            Margin="0,30"
+           Padding="0"
+           IsClippedToBounds="True">
+                        <Label x:Name="lb1" Text="" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                    </Frame>
+                    <Label x:Name="lb2" Text=""  TextColor="#b68948" Margin="20,0,0,20" FontSize="Title" VerticalOptions="EndAndExpand"></Label>
+                </StackLayout>
+
+                <StackLayout Margin="20,20">
+
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Margin="10" Orientation="Horizontal">
+                            <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="browser"></Image>
+                            <Label Text="My Orders"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Margin="10" Orientation="Horizontal">
+                            <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="user"></Image>
+                            <Label Text="My Profile"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Margin="10" Orientation="Horizontal">
+                            <Image HeightRequest="20" WidthRequest="20" Margin="0,0,20,0" Source="logout"></Image>
+                            <Label Text="Logout"></Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+        
+        
+    </MasterDetailPage.Master>
+
+
+
+    <MasterDetailPage.Detail>
+
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage  Title="Main" BackgroundImageSource="a5">
+                    <ScrollView>
+                        <StackLayout>
+                            <Label HorizontalOptions="Center" FontSize="Title" Margin="0,70,0,0" TextColor="WhiteSmoke">Select Event</Label>
+
+                            <Label Text="Marriage Event"  Margin="0,30,0,0" HorizontalOptions="Center" FontSize="Large" TextColor="WhiteSmoke"></Label>
+                            <StackLayout Padding="20,0">
+                                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                                    <Image  Source="a11.png" HeightRequest="200" Aspect="Fill"
+          VerticalOptions="CenterAndExpand"
+           >
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout x:Name="s1">
+                                <Button x:Name="btn1" Clicked="Btn1_Clicked" Text="Select" TextColor="#1b1b1b" BackgroundColor="#b68948" VerticalOptions="Center" Margin="50,5"></Button>
+                            </StackLayout>
+
+                            <Label Text="Birthday Event" Margin="0,30,0,0" HorizontalOptions="Center" FontSize="Large" TextColor="WhiteSmoke"></Label>
+                            <StackLayout Padding="20,0">
+                                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                                    <Image  Source="a22.jpg" HeightRequest="200" Aspect="Fill"
+          HorizontalOptions="CenterAndExpand"
+          >
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout x:Name="s2">
+                                <Button x:Name="btn2" Clicked="Btn2_Clicked" Text="Select" TextColor="#1b1b1b" BackgroundColor="#b68948" VerticalOptions="Center" Margin="50,5"></Button>
+                            </StackLayout>
+
+
+                            <Label Text="Dawat"  Margin="0,30,0,0" HorizontalOptions="Center" FontSize="Large" TextColor="WhiteSmoke"></Label>
+                            <StackLayout Padding="20,0" Margin="0,0,0,30">
+                                <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                                    <Image  Source="a33.jpg" HeightRequest="200" Aspect="Fill"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand" >
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout x:Name="s3">
+                                <Button x:Name="btn3" Clicked="Btn3_Clicked" Text="Select"  TextColor="#1b1b1b" BackgroundColor="#b68948" VerticalOptions="Center" Margin="50,5"></Button>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </ScrollView>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

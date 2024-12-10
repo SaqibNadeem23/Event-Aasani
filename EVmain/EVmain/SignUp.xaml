@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EVmain.SignUp" BackgroundImageSource="abg.jpg"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+
+    <ScrollView>
+    <StackLayout>
+        
+        <StackLayout HeightRequest="50" Margin="0,50,0,10" >
+                <Label Text="Sign Up" TextColor="#b68948" FontSize="Title" HorizontalOptions="Center"></Label>
+        </StackLayout>
+        
+        
+        <StackLayout VerticalOptions="Center" Margin="80,10">
+
+                <Entry x:Name="usnm" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="UserName" />
+
+                <Entry x:Name="nm" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="Full Name" />
+
+                <Entry x:Name="ph" Keyboard="Numeric" MaxLength="11" WidthRequest="280" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="Phone Number" />
+
+                <Entry x:Name="em" WidthRequest="280" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="Email" />
+
+                <Entry x:Name="pass" WidthRequest="280" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="Password" IsPassword="True"/>
+
+                <Entry x:Name="cpass" PlaceholderColor="#b68948" TextColor="Whitesmoke" Placeholder="Confirm Password" IsPassword="True" />
+
+                <Button x:Name="Sgn" Clicked="Sgn_Clicked"  Text="Sign Up" TextColor="#1b1b1b" BackgroundColor="#b68948" Margin="50,20,50,0"></Button>
+            
+        </StackLayout>
+           
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

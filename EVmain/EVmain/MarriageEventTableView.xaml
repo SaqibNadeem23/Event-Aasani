@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.MarriageEventTableView">
+
+    <ScrollView Orientation="Both">
+        
+        <StackLayout Margin="5,30"  x:Name="MS">
+            
+            <StackLayout Orientation="Horizontal">
+                
+                
+                <StackLayout  WidthRequest="150">
+                    <Label  Text="EventId"></Label>
+                </StackLayout>
+                <StackLayout  WidthRequest="150">
+                    <Label Text="UserId" ></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="Date"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="Guests"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="Timing"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="EventType"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="Cake Name"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="CakeQuantity"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="CakeRate"></Label>
+                </StackLayout>
+                <StackLayout WidthRequest="150">
+                    <Label Text="Location"></Label>
+                </StackLayout>
+                <StackLayout  WidthRequest="150">
+                    <Label  Text="TotalBill"></Label>
+                </StackLayout>
+            </StackLayout>
+            
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

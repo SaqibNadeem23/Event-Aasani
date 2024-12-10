@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EVmain.DawatInfo" BackgroundImageSource="abg">
+
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="ret.png" HeightRequest="40" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label VerticalOptions="Center" Margin="0,0,70,0" FontSize="Small" TextColor="whitesmoke">back</Label>
+            </StackLayout>
+            <Label Margin="0,0,0,50" TextColor="whitesmoke" HorizontalOptions="Center" FontSize="30">Information</Label>
+
+            <StackLayout Orientation="Horizontal" Margin="30,0,30,40">
+                <Label FontSize="20" Margin="0,0,20,0" TextColor="whitesmoke" Text="Select Dawat Date: "></Label>
+                <DatePicker TextColor="whitesmoke"></DatePicker>
+            </StackLayout>
+            <Entry Margin="30,0,30,40" FontSize="20" PlaceholderColor="whitesmoke" TextColor="whitesmoke" Placeholder="Enter Number of Expected Guests"></Entry>
+            <StackLayout Orientation="Horizontal" Margin="30,0,30,40" >
+                <Label FontSize="20" Margin="0,0,20,0" TextColor="whitesmoke" Text="Select Dawat Timing: "></Label>
+                <TimePicker TextColor="whitesmoke"></TimePicker>
+            </StackLayout>
+            <Entry Margin="30,0,30,40" FontSize="20" PlaceholderColor="whitesmoke" TextColor="whitesmoke" Placeholder="Enter Dawat Location"></Entry>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
